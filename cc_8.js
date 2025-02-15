@@ -49,3 +49,5 @@ function calculateRentalCost(days, carType, insurance = false) {
 calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
 calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
 
+
+ 
