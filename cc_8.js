@@ -7,7 +7,7 @@ function calculatenetSalary(baseSalary, bonus, taxRate) {
 }
 
 // Test Data
-calculatenetSalary(5000, 500, 1.); // Expected output: "Net Salary: $5000.00"
+calculatenetSalary(5000, 500, .1); // Expected output: "Net Salary: $5000.00"
 calculatenetSalary(7000, 1000, .15); // Expected output: "Net Salary: $6950.00"
 
 
@@ -39,6 +39,7 @@ calculateServiceFee(500, "Standard"); // Expected output: "Service Fee: $50.00"
 
 //Task 4
 function calculateRentalCost(days, carType, insurance = false) {
+    
     let dayRates = { "Economy": 40, "Standard": 60, "Luxury": 100 };
     let totalCost = (dayRates[days] * carType) + insurance;
     
@@ -49,9 +50,9 @@ function calculateRentalCost(days, carType, insurance = false) {
 calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
 calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
 
-//Task 5
+//Task 5: Returning Values
 function calculateLoanPayment(principal, rate, time) {
-   let calculatePayment= (principal +(principal * rate * time).toFixed(2));
+   let calculatePayment= (principal +(principal * rate * time)).toFixed(2);
    return (`Total Payment is: $${calculatePayment}`);
 }
 
@@ -60,7 +61,7 @@ function calculateLoanPayment(principal, rate, time) {
 console.log(calculateLoanPayment(1000, 0.05, 2)); // Expected output: "Total Payment: $1100.00"
 console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
  
-//Task 6
+//Task 6: Higher-Order Functions
 const transactions = [200, 1500, 3200, 800, 2500];
 
 
