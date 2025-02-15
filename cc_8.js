@@ -67,3 +67,19 @@ const transactions = [200, 1500, 3200, 800, 2500];
 const filterLargeTransactions = transactions.filter(transaction => transaction > 1000);
 console.log(filterLargeTransactions);
 // Expected output: [1500, 3200, 2500]
+
+//Task 7
+function createCartTracker() {
+    let totalcartItems = 0;
+   
+    return function(cart) {
+        totalcartItems += cart;
+        return `The Item Total is: $${totalcartItems}`;
+    };
+ }
+ 
+ 
+ // Test Cases
+ let cart = createCartTracker();
+ console.log(cart(20)); // Expected output: "Total Cart Value: $20"
+ console.log(cart(35)); // Expected output: "Total Cart Value: $55"
