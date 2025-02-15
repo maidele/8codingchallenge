@@ -83,3 +83,14 @@ function createCartTracker() {
  let cart = createCartTracker();
  console.log(cart(20)); // Expected output: "Total Cart Value: $20"
  console.log(cart(35)); // Expected output: "Total Cart Value: $55"
+
+ //Task 8
+function calculateSavings(years, amount) {
+    if (years == 10) return amount;
+    return calculateSavings(amount + .05);
+ }
+ 
+ 
+ // Test Cases
+ calculateSavings(8, 1000); // Expected output: "Projected Savings: $1102.50"
+ calculateSavings(5, 5000); // Expected output: "Projected Savings: $5525.63"
