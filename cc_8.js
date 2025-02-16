@@ -1,21 +1,21 @@
 //Task 1- Employee Salary Calculation; Function Declarations 
 
-function calculatenetSalary(baseSalary, bonus, taxRate) {
-    let netSalary =(baseSalary + bonus) - (baseSalary * taxRate);
-    console.log(`Total Net Salary: $${netSalary}`);
+function calculateSalary(baseSalary, bonus, taxRate) {
+    let salary =(baseSalary + bonus) - (baseSalary * taxRate);
+    console.log(`Total Net Salary: $${salary.toFixed(2)}`);
 
 }
 
 // Test Data
-calculatenetSalary(5000, 500, .1); // Expected output: "Net Salary: $5000.00"
-calculatenetSalary(7000, 1000, .15); // Expected output: "Net Salary: $6950.00"
+calculateSalary(5000, 500, .1); // Expected output: "Net Salary: $5000.00"
+calculateSalary(7000, 1000, .15); // Expected output: "Net Salary: $6950.00"
 
 
 //Task 2-
 
 const calculateDiscount = function(price, discountRate) {
-    let finalPrice = price - (price * discountRate);
-    console.log(`Final Price: $${finalPrice}`);
+    let finalPrice = price - (price * discountRate).toFixed(2);
+    console.log(`Final Price: $${finalPrice.toFixed(2)}`);
 };
 
 // Test Data
@@ -27,10 +27,10 @@ calculateDiscount(250, 0.15); // Expected output: "Final Price: $212.50"
 const calculateServiceFee = (amount, serviceType) => {
     let servicefee = 0;
     if (serviceType === "Premium") servicefee = amount * 0.15;
-    else if (serviceType === "Standard") servicefee = amount * 0.1;
-    else serviceType = amount * 0.05;
+    else if (serviceType === "Standard") servicefee = amount * 0.10;
+    else servicefee = amount * 0.05;
     
-    console.log(`The Service Fee is: $${servicefee}`);
+    console.log(`Service Fee: $${servicefee}`);
 };
 
 // Test Cases
@@ -62,8 +62,12 @@ console.log(calculateLoanPayment(1000, 0.05, 2)); // Expected output: "Total Pay
 console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
  
 //Task 6: Higher-Order Functions
-const transactions = [200, 1500, 3200, 800, 2500];
+function getfilterLargeTransactions(transactions, filterFunction) {
+    let LargeTransactions = transactions.filter(filterFunction);
+    console.log(`Large Transactions filtered: ${LargeTransactions}`);
+}
 
+const transactions = [200, 1500, 3200, 800, 2500];
 
 const filterLargeTransactions = transactions.filter(transaction => transaction > 1000);
 console.log(filterLargeTransactions);
@@ -75,7 +79,7 @@ function createCartTracker() {
    
     return function(cart) {
         totalcartItems += cart;
-        return `The Item Total is: $${totalcartItems}`;
+        return `Total Cart Value: $${totalcartItems}`;
     };
  }
  
