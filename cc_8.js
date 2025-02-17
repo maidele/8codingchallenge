@@ -30,7 +30,7 @@ const calculateServiceFee = (amount, serviceType) => {
     else if (serviceType === "Standard") servicefee = amount * 0.10;
     else servicefee = amount * 0.05;
     
-    console.log(`Service Fee: $${servicefee}`);
+    console.log(`Service Fee: $${servicefee.toFixed(2)}`);
 };
 
 // Test Cases
@@ -45,6 +45,7 @@ function calculateRentalCost(days, carType, insurance = false) {
     
     console.log(`Total Rental Cost: $${totalCost}`);
 }
+
 
 // Test Cases
 calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
@@ -91,11 +92,12 @@ function createCartTracker() {
 
  //Task 8
 function calculateSavings(years, amount) {
-    if (years == 10) return amount;
-    return calculateSavings(amount + .05);
- }
+    if (years >= 10) return `Projected Savings: $${amount.toFixed(2)}` ;
+    return calculateSavings(years + 1, amount * 1.05.toFixed(2));
+}
+
  
  
  // Test Cases
- calculateSavings(8, 1000); // Expected output: "Projected Savings: $1102.50"
- calculateSavings(5, 5000); // Expected output: "Projected Savings: $5525.63"
+ console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
+ console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $5525.63"
