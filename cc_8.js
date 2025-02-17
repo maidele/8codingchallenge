@@ -2,7 +2,7 @@
 
 function calculateSalary(baseSalary, bonus, taxRate) {
     let salary =(baseSalary + bonus) - (baseSalary * taxRate);
-    console.log(`Total Net Salary: $${salary.toFixed(2)}`);
+    console.log(`Total Net Salary: $${salary.toFixed(2)}`);// logging for emplolyee salary
 
 }
 
@@ -15,7 +15,7 @@ calculateSalary(7000, 1000, .15); // Expected output: "Net Salary: $6950.00"
 
 const calculateDiscount = function(price, discountRate) {
     let finalPrice = price - (price * discountRate).toFixed(2);
-    console.log(`Final Price: $${finalPrice.toFixed(2)}`);
+    console.log(`Final Price: $${finalPrice.toFixed(2)}`);//logging for final price
 };
 
 // Test Data
@@ -30,7 +30,7 @@ const calculateServiceFee = (amount, serviceType) => {
     else if (serviceType === "Standard") servicefee = amount * 0.10;
     else servicefee = amount * 0.05;
     
-    console.log(`Service Fee: $${servicefee.toFixed(2)}`);
+    console.log(`Service Fee: $${servicefee.toFixed(2)}`);//logging for service fee
 };
 
 // Test Cases
@@ -43,7 +43,7 @@ function calculateRentalCost(days, carType, insurance = false) {
     let dayRates = { "Economy": 40, "Standard": 60, "Luxury": 100 };
     let totalCost = (dayRates[days] * carType) + insurance;
     
-    console.log(`Total Rental Cost: $${totalCost}`);
+    console.log(`Total Rental Cost: $${totalCost}`);//logging for rental cost
 }
 
 
@@ -54,7 +54,7 @@ calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost:
 //Task 5: Returning Values
 function calculateLoanPayment(principal, rate, time) {
    let calculatePayment= (principal +(principal * rate * time)).toFixed(2);
-   return (`Total Payment is: $${calculatePayment}`);
+   return (`Total Payment is: $${calculatePayment}`);//logging for loan payment
 }
 
 
@@ -65,7 +65,7 @@ console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Pay
 //Task 6: Higher-Order Functions
 function getfilterLargeTransactions(transactions, filterFunction) {
     let LargeTransactions = transactions.filter(filterFunction);
-    console.log(`Large Transactions filtered: ${LargeTransactions}`);
+    console.log(`Large Transactions filtered: ${LargeTransactions}`);// logging for large transactions
 }
 
 const transactions = [200, 1500, 3200, 800, 2500];
@@ -88,7 +88,7 @@ function createCartTracker() {
  // Test Cases
  let cart = createCartTracker();
  console.log(cart(20)); // Expected output: "Total Cart Value: $20"
- console.log(cart(35)); // Expected output: "Total Cart Value: $55"
+ console.log(cart(35)); // Expected output: "Total Cart Value: $55"//logging for cart item
 
  //Task 8
 function calculateSavings(years, amount) {
@@ -100,4 +100,4 @@ function calculateSavings(years, amount) {
  
  // Test Cases
  console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
- console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $5525.63"
+ console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $5525.63"// logging for savings

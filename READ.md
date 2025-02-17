@@ -1,0 +1,1 @@
+This is challenge 8. This challenge is about functions used in javascript. This code can be ran in your browser. 
